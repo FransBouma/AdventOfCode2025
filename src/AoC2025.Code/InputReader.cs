@@ -27,7 +27,7 @@ namespace AoC2025.Core
 			return File.ReadLines(pathFilename).Select(l => int.Parse(l)).ToList();
 		}
 
-		
+			
 		public static List<string> GetInputAsStringList(string pathFilename)
 		{
 			return new List<string>(File.ReadLines(pathFilename));
