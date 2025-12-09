@@ -47,5 +47,19 @@ namespace AoC2025.Core
 			}
 			return toReturn;
 		}
+
+		public static char[,] GetInputAs2DCharArrayList(string pathFilename)
+		{
+			var lines = GetInputAsStringList(pathFilename);
+			char[,] toReturn = new char[lines[0].Length, lines.Count];
+			for(var y = 0; y < lines.Count; y++)
+			{
+				for(var x = 0; x < lines[y].Length; x++)
+				{
+					toReturn[x, y] = lines[y][x];
+				}
+			}
+			return toReturn;
+		}
 	}
 }
