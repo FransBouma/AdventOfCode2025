@@ -6,30 +6,29 @@ using SD.Tools.BCLExtensions.CollectionsRelated;
 
 namespace AoC2025.Core
 {
-	public class Point3D
-	{
-		public long X;
-		public long Y;
-		public long Z;
-
-		public double Distance(Point3D p)
-		{
-			return Math.Sqrt(((X-p.X) * (X-p.X)) + ((Y-p.Y) * (Y-p.Y)) + ((Z-p.Z) * (Z-p.Z)));
-		}
-	}
-
-
-	public class Distance
-	{
-		public int PointAOffset;
-		public int PointBOffset;
-
-		public double AbsoluteDistance;
-	}
-
-
 	public static class Day8
 	{
+		public class Point3D
+		{
+			public long X;
+			public long Y;
+			public long Z;
+
+			public double Distance(Point3D p)
+			{
+				return Math.Sqrt(((X-p.X) * (X-p.X)) + ((Y-p.Y) * (Y-p.Y)) + ((Z-p.Z) * (Z-p.Z)));
+			}
+		}
+
+
+		public class Distance
+		{
+			public int PointAOffset;
+			public int PointBOffset;
+
+			public double AbsoluteDistance;
+		}
+
 		public static int FindCircuitOffset(List<HashSet<int>> circuits, int pointOffset)
 		{
 			for(int i=0;i<circuits.Count;i++)
